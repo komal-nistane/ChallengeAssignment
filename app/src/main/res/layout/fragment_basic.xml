@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".fragment.BasicFragment">
+
+<RelativeLayout
+    android:id="@+id/basic_calculator_background"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@color/colorCyan">
+
+
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/colorPrimary"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/result_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size"
+                android:text="@string/result"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/output_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/result_layout">
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/num1_edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_weight="1"
+                />
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/num2_edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_below="@+id/input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/sub_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sub"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/mul_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mul"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/div_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/div"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
+</RelativeLayout>
