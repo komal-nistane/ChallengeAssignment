@@ -5,6 +5,7 @@ import android.util.Log;
 import com.example.calculatorchallengeassignmnet.service.serviceImpl.BasicCalculatorImpl;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -16,11 +17,16 @@ import static org.junit.Assert.*;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 
-public class CalculatorUnitTest {
+public class BasicCalculatorUnitTest {
 
     private static final double DELTA = 1e-15;
 
-    BasicCalculatorImpl basicCalculator = new BasicCalculatorImpl();
+    BasicCalculatorImpl basicCalculator ;
+
+    @Before
+    public void setup() throws Exception {
+        basicCalculator = new BasicCalculatorImpl();
+    }
 
     @Test
     public void additionIsPass() {
