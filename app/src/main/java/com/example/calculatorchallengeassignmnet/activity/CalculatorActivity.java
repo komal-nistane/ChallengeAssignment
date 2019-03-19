@@ -26,6 +26,8 @@ import com.example.calculatorchallengeassignmnet.adapter.CalculatorPagerAdapter;
 import com.example.calculatorchallengeassignmnet.fragment.BasicFragment;
 import com.example.calculatorchallengeassignmnet.fragment.ScientificFragment;
 
+import java.util.Locale;
+
 public class CalculatorActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
