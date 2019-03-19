@@ -56,10 +56,6 @@ public class CalculatorActivity extends AppCompatActivity
      * Holds fragment transaction instance
      */
     FragmentTransaction mFragmentTransaction;
-    /**
-     * Holds outer relative layout  instance
-     */
-    RelativeLayout mRelativeBackground;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -159,26 +155,23 @@ public class CalculatorActivity extends AppCompatActivity
         @Override
         public void onClick(View view) {
             Fragment page = getSupportFragmentManager().findFragmentById(R.id.view_pager_calculator);
+           RelativeLayout mRelativeBackgroundBasic = page.getActivity().findViewById(R.id.basic_calculator_background);
+           RelativeLayout mRelativeBackgroundSci = page.getActivity().findViewById(R.id.scientific_calculator_background);
             System.out.println("page object ::" + page);
             if (page != null) {
                 switch (view.getId()) {
                     case R.id.button_cyan:
-                        mRelativeBackground = page.getActivity().findViewById(R.id.basic_calculator_background);
-                        mRelativeBackground.setBackgroundColor(Color.CYAN);
-                        mRelativeBackground = page.getActivity().findViewById(R.id.scientific_calculator_background);
-                        mRelativeBackground.setBackgroundColor(Color.CYAN);
+
+                        mRelativeBackgroundBasic.setBackgroundColor(Color.CYAN);
+                        mRelativeBackgroundSci.setBackgroundColor(Color.CYAN);
                         break;
                     case R.id.button_green:
-                        mRelativeBackground = page.getActivity().findViewById(R.id.basic_calculator_background);
-                        mRelativeBackground.setBackgroundColor(Color.GREEN);
-                        mRelativeBackground = page.getActivity().findViewById(R.id.scientific_calculator_background);
-                        mRelativeBackground.setBackgroundColor(Color.GREEN);
+                        mRelativeBackgroundBasic.setBackgroundColor(Color.GREEN);
+                        mRelativeBackgroundSci.setBackgroundColor(Color.GREEN);
                         break;
                     case R.id.button_red:
-                        mRelativeBackground = page.getActivity().findViewById(R.id.basic_calculator_background);
-                        mRelativeBackground.setBackgroundColor(Color.RED);
-                        mRelativeBackground = page.getActivity().findViewById(R.id.scientific_calculator_background);
-                        mRelativeBackground.setBackgroundColor(Color.RED);
+                        mRelativeBackgroundBasic.setBackgroundColor(Color.RED);
+                        mRelativeBackgroundSci.setBackgroundColor(Color.RED);
                         break;
                 }
             }
