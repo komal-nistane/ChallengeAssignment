@@ -19,4 +19,7 @@
     <string name="basic">Basic</string>
     <string name="sci">Scientific</string>
     <string name="setting" translatable="false">Color Settings</string>
+    <string name="cyan_button">Cyan Button</string>
+    <string name="green_button">Green Button</string>
+    <string name="red_button">Red Button</string>
 </resources>

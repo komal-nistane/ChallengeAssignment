@@ -19,38 +19,43 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer">
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_gravity="bottom"
-    >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/nav_footer_margin"
+            android:layout_marginStart="@dimen/nav_footer_margin"
+            android:layout_marginBottom="@dimen/fab_margin">
 
+            <ImageButton
+                android:id="@+id/button_red"
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
+                android:background="@drawable/round_button_red"
+                android:contentDescription="@string/red_button"
+                />
 
-    <ImageButton
-        android:id="@+id/button_red"
-        android:text="Red"
-        android:background="@drawable/round_button_red"
-        android:layout_width="50dp"
-        android:layout_height="50dp" />
+            <ImageButton
+                android:id="@+id/button_green"
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
+                android:background="@drawable/round_button_green"
+                android:layout_marginLeft="@dimen/text_size"
+                android:layout_marginStart="@dimen/text_size"
+                android:contentDescription="@string/green_button"/>
 
-    <ImageButton
-        android:id="@+id/button_green"
-        android:text="Red"
-        android:background="@drawable/round_button_green"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        />
-
-    <ImageButton
-        android:id="@+id/button_cyan"
-        android:text="Red"
-        android:background="@drawable/round_button_cyan"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        />
-</LinearLayout>
+            <ImageButton
+                android:id="@+id/button_cyan"
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
+                android:background="@drawable/round_button_cyan"
+                android:layout_marginLeft="@dimen/text_size"
+                android:layout_marginStart="@dimen/text_size"
+                android:contentDescription="@string/cyan_button"/>
+        </LinearLayout>
     </android.support.design.widget.NavigationView>
 </android.support.v4.widget.DrawerLayout>
