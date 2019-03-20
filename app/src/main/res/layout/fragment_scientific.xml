@@ -27,18 +27,13 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/text_size"
+                    style="@style/CustomStyle"
                     android:text="@string/result"
-                    android:textColor="@color/colorWhite"/>
+                    />
 
                 <TextView
                     android:id="@+id/log_output_text_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/text_size"
+                    style="@style/CustomStyle"
                     />
             </LinearLayout>
             <LinearLayout

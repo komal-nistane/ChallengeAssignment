@@ -33,20 +33,16 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/text_size"
+                style="@style/CustomStyle"
                 android:text="@string/result"
-                android:textColor="@color/colorWhite"/>
+               />
 
             <TextView
                 android:id="@+id/output_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorWhite"
-                android:textSize="@dimen/text_size"
+                style="@style/CustomStyle"
                 />
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/input_layout"
             android:layout_width="match_parent"
@@ -60,7 +56,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                android:layout_weight="1"
-                android:autofillHints="@string/hint1"
                 />
 
             <EditText
