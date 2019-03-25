@@ -76,10 +76,10 @@ public class ScientificFragment extends Fragment {
         public void onClick(View view) {
             switch (view.getId()) {
                 case R.id.log_button:
-                    calculateLogBaseE();
+                    calculateLogBaseN();
                     break;
                 case R.id.logn_button:
-                    calculateLogBaseN();
+                    calculateLogBaseE();
                     break;
 
             }

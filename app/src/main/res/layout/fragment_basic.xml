@@ -11,11 +11,13 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_centerInParent="true"
-    android:background="@color/colorCyan">
+    android:background="@color/colorCyan"
+    tools:ignore="UselessParent">
 
 
     <RelativeLayout
         android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginStart="@dimen/fab_margin"
         android:layout_marginTop="@dimen/fab_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,20 +33,16 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/text_size"
+                style="@style/CustomStyle"
                 android:text="@string/result"
-                android:textColor="@color/colorWhite"/>
+               />
 
             <TextView
                 android:id="@+id/output_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorWhite"
-                android:textSize="@dimen/text_size"
+                style="@style/CustomStyle"
                 />
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/input_layout"
             android:layout_width="match_parent"
@@ -53,7 +51,7 @@
             android:layout_below="@+id/result_layout">
 
             <EditText
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:id="@+id/num1_edit_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -61,7 +59,7 @@
                 />
 
             <EditText
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:id="@+id/num2_edit_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

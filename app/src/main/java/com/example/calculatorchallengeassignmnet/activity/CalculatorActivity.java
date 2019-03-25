@@ -1,6 +1,5 @@
 package com.example.calculatorchallengeassignmnet.activity;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -16,17 +15,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import com.example.calculatorchallengeassignmnet.R;
 import com.example.calculatorchallengeassignmnet.adapter.CalculatorPagerAdapter;
 import com.example.calculatorchallengeassignmnet.fragment.BasicFragment;
 import com.example.calculatorchallengeassignmnet.fragment.ScientificFragment;
-
-import java.util.Locale;
 
 public class CalculatorActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -56,10 +51,6 @@ public class CalculatorActivity extends AppCompatActivity
      * Holds fragment transaction instance
      */
     FragmentTransaction mFragmentTransaction;
-    /**
-     * Holds outer relative layout  instance
-     */
-    RelativeLayout mRelativeBackground;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,8 +96,8 @@ public class CalculatorActivity extends AppCompatActivity
 
     private void setTabLayout() {
         mTabLayoutView = (TabLayout) findViewById(R.id.tab_layout);
-        mTabLayoutView.addTab(mTabLayoutView.newTab().setText("Basic"));
-        mTabLayoutView.addTab(mTabLayoutView.newTab().setText("Scientific"));
+        mTabLayoutView.addTab(mTabLayoutView.newTab().setText(getResources().getString(R.string.basic)));
+        mTabLayoutView.addTab(mTabLayoutView.newTab().setText(getResources().getString(R.string.sci)));
         mTabLayoutView.setTabGravity(TabLayout.GRAVITY_FILL);
     }
 
@@ -159,26 +150,23 @@ public class CalculatorActivity extends AppCompatActivity
         @Override
         public void onClick(View view) {
             Fragment page = getSupportFragmentManager().findFragmentById(R.id.view_pager_calculator);
-            System.out.println("page object ::" + page);
+           RelativeLayout mRelativeBackgroundBasic = page.getActivity().findViewById(R.id.basic_calculator_background);
+           RelativeLayout mRelativeBackgroundSci = page.getActivity().findViewById(R.id.scientific_calculator_background);
+           Log.i("page object ::" , String.valueOf(page));
             if (page != null) {
                 switch (view.getId()) {
                     case R.id.button_cyan:
-                        mRelativeBackground = page.getActivity().findViewById(R.id.basic_calculator_background);
-                        mRelativeBackground.setBackgroundColor(Color.CYAN);
-                        mRelativeBackground = page.getActivity().findViewById(R.id.scientific_calculator_background);
-                        mRelativeBackground.setBackgroundColor(Color.CYAN);
+
+                        mRelativeBackgroundBasic.setBackgroundColor(Color.CYAN);
+                        mRelativeBackgroundSci.setBackgroundColor(Color.CYAN);
                         break;
                     case R.id.button_green:
-                        mRelativeBackground = page.getActivity().findViewById(R.id.basic_calculator_background);
-                        mRelativeBackground.setBackgroundColor(Color.GREEN);
-                        mRelativeBackground = page.getActivity().findViewById(R.id.scientific_calculator_background);
-                        mRelativeBackground.setBackgroundColor(Color.GREEN);
+                        mRelativeBackgroundBasic.setBackgroundColor(Color.GREEN);
+                        mRelativeBackgroundSci.setBackgroundColor(Color.GREEN);
                         break;
                     case R.id.button_red:
-                        mRelativeBackground = page.getActivity().findViewById(R.id.basic_calculator_background);
-                        mRelativeBackground.setBackgroundColor(Color.RED);
-                        mRelativeBackground = page.getActivity().findViewById(R.id.scientific_calculator_background);
-                        mRelativeBackground.setBackgroundColor(Color.RED);
+                        mRelativeBackgroundBasic.setBackgroundColor(Color.RED);
+                        mRelativeBackgroundSci.setBackgroundColor(Color.RED);
                         break;
                 }
             }

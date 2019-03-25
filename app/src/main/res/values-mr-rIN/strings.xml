@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">कॅल्क्युलेटर</string>
+    <string name="basic">मूलभूत</string>
+    <string name="sci">वैज्ञानिक</string>
+</resources>
